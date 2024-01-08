@@ -1,0 +1,72 @@
+.signUp {
+  background-image: url("https://images.pexels.com/photos/2310713/pexels-photo-2310713.jpeg?auto=compress&cs=tinysrgb&w=400");
+  background-size: cover;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  margin-top: 10px;
+  background-color: #ffffff4d;
+  padding: 10px;
+  border: 1px solid rgb(129, 121, 121);
+  border-radius: 1px;
+  /* width: 35vw; */
+}
+
+.signUpLogo {
+  width: 200px;
+  object-fit: contain;
+  padding: 10px 0px;
+}
+
+.loginPara {
+  color: rgba(var(--f52, 142, 142, 142), 1);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0px 40px 20px 40px;
+}
+.bottomloginPara {
+  color: rgba(var(--f52, 142, 142, 142), 1);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 3px 0px;
+}
+
+input {
+  padding: 5px;
+  margin: 3px 0px;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form > div {
+  width: 65%;
+  margin: auto;
+}
+
+#submit-btn {
+  background-color: #1773ea;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  width: 80%;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.form2 {
+  background-color: #ffffff4d;
+  border: 1px solid rgb(129, 121, 121);
+  padding: 30px;
+  margin-top: 5px;
+  border-radius: 1px;
+}
