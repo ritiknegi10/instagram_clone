@@ -40,7 +40,7 @@ export default function Home() {
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
-        setData(...data, ...result);
+        setData((data) => [...data, ...result]);
       })
       .catch((err) => console.log(err));
   };
