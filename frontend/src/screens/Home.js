@@ -12,7 +12,6 @@ export default function Home() {
   const [show, setShow] = useState(false);
   const [item, setItem] = useState([]);
   let limit = 5;
-  let skip = 0;
 
   // Toast functions
   const notifyA = (msg) => toast.error(msg);
@@ -32,7 +31,7 @@ export default function Home() {
 
   const fetchPost = () => {
     // Fetching all posts
-    fetch(`/allposts?limit=${limit}&skip=${skip}`, {
+    fetch(`/allposts?limit=${limit}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -40,7 +39,7 @@ export default function Home() {
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
-        setData((data) => [...data, ...result]);
+        setData(result);
       })
       .catch((err) => console.log(err));
   };
@@ -50,7 +49,7 @@ export default function Home() {
       document.documentElement.clientHeight + window.pageYOffset >=
       document.documentElement.scrollHeight
     ) {
-      skip = skip + 5;
+      limit = limit + 5;
       fetchPost();
     }
   };
